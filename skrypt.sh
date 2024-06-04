@@ -16,6 +16,10 @@ case $1 in
 			echo "File: $filename, Created by: $0, Date: $(date)" > $filename
 		done
 		;;
+	--init)
+		git clone https://github.com/Rolas215/Narzedzia_w_branzy_IT.git
+		export PATH=$PATH:$(pwd)/Narzedzia_w_branzy_IT.git
+		;;
 	--help|-h)
 		echo "Usage: skrypt.sh [OPTION]"
 		echo "--date	Display today's date."
