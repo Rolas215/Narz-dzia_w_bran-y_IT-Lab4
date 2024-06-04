@@ -16,6 +16,12 @@ case $1 in
 			echo "File: $filename, Created by: $0, Date: $(date)" > $filename
 		done
 		;;
+	--help)
+		echo "Usage: skrypt.sh [OPTION]"
+		echo "--date	Display today's date."
+		echo "--logs	Create log files."
+		echo "--help	Display this help message."
+		;;
 	*)
 		echo "Invalid option. Use --help or -h for help."
 		;;
