@@ -35,9 +35,11 @@ case $1 in
 		;;
 	--help|-h)
 		echo "Usage: skrypt.sh [OPTION]"
-		echo "--date	Display today's date."
-		echo "--logs	Create log files."
-		echo "--help	Display this help message."
+		echo "--date, -d		Display today's date."
+		echo "--logs, -l [num]		Create log files (default 100)."
+		echo "--error, -e [num]		Create error files (default 100)."
+		echo "--init			Clone repo and set PATH."
+		echo "--help, -h		Display this help message."
 		;;
 	*)
 		echo "Invalid option. Use --help or -h for help."
