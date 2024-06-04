@@ -1,10 +1,10 @@
 #!/bin/bash
 
 case $1 in
-	--date)
+	--date|-d)
 		echo "Today's date is: $(date)"
 		;;
-	--logs)
+	--logs|-l)
 		if [ -z "$2" ]; then
 			num=100
 		else
@@ -16,7 +16,7 @@ case $1 in
 			echo "File: $filename, Created by: $0, Date: $(date)" > $filename
 		done
 		;;
-	--help)
+	--help|-h)
 		echo "Usage: skrypt.sh [OPTION]"
 		echo "--date	Display today's date."
 		echo "--logs	Create log files."
